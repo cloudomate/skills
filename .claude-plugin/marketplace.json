@@ -1,0 +1,23 @@
+{
+  "name": "cloudomate-agent-skills",
+  "owner": {
+    "name": "Cloudomate",
+    "email": "yash.jethi@gmail.com"
+  },
+  "metadata": {
+    "description": "Cloudomate agent skills",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "iva-device-skills",
+      "description": "On-device voice-assistant skills for the Iva / Hermes smart speaker — device capabilities overview and persisted volume control.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/iva-hermes",
+        "./skills/volume-control"
+      ]
+    }
+  ]
+}

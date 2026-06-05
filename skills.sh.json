@@ -1,0 +1,15 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "name": "cloudomate-skills",
+  "description": "Cloudomate agent skills for the Hermes Agent (Iva on-device voice assistant and more).",
+  "groupings": [
+    {
+      "title": "About Iva",
+      "skills": ["iva-hermes"]
+    },
+    {
+      "title": "Device Control",
+      "skills": ["volume-control"]
+    }
+  ]
+}
