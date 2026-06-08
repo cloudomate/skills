@@ -7,7 +7,7 @@ license: MIT
 metadata:
   hermes:
     tags: [iva, device, voice-assistant, hardware, smart-speaker, capabilities]
-    related_skills: [volume-control]
+    related_skills: [volume-control, mic-audio]
 ---
 
 # Iva-Hermes — on-device voice assistant
@@ -29,6 +29,7 @@ skill named in the table.
 | Capability | Skill | Helper |
 |---|---|---|
 | Speaker volume (up/down/set/mute, persisted across reboot) | `volume-control` | `iva-volume` |
+| Record from the mic / play audio out the speaker | `mic-audio` | `iva-audio` |
 
 _(More device controls — display, brightness, media — get added here as they
 ship.)_
@@ -45,6 +46,6 @@ ship.)_
 
 This repo is pulled directly onto the device and exposed to Hermes via
 `skills.external_dirs` in `~/.hermes/config.yaml` (see the repo README). The
-concrete `iva-volume` command contract is also pinned in the device's
-`~/.hermes/SOUL.md` so the agent always has it in context for reliable,
-low-latency voice turns.
+concrete `iva-volume` and `iva-audio` command contracts are also pinned in the
+device's `~/.hermes/SOUL.md` so the agent always has them in context for
+reliable, low-latency voice turns.
