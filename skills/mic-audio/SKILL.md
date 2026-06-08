@@ -43,8 +43,9 @@ short spoken sentence.
 | play an audio file (wav/mp3/…) | `/home/iva/.local/bin/iva-audio play /path/to/file` |
 | play back / replay the last recording | `/home/iva/.local/bin/iva-audio play-last` |
 
-- `record` plays a short beep the instant it starts capturing, to cue the user
-  to speak.
+- `record` first speaks a short cue ("I'll start recording after the beep, for N
+  seconds"), then beeps, then captures — recording begins cleanly *after* the
+  beep, so nothing is lost and the user knows when to speak.
 - `record` with no seconds waits for speech to start, then stops after ~1.5s of
   silence (times out if no one speaks). `record N` captures exactly N seconds.
 - Recordings auto-save under `~/.local/share/iva-voice/recordings/rec_<ts>.wav`
